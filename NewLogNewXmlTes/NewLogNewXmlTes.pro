@@ -17,12 +17,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    widget.cpp \
-    writexmlopenandwrite.cpp
+    widget.cpp
 
 HEADERS += \
-    widget.h \
-    writexmlopenandwrite.h
+    widget.h
 
 FORMS += \
     widget.ui
