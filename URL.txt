@@ -1,0 +1,2 @@
+
+Qt中两种实现记录日志的方式  https://www.cnblogs.com/zhuchunlin/p/16485102.html
