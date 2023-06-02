@@ -23,6 +23,11 @@ SplitingXiaoNiaoNew::SplitingXiaoNiaoNew(QString strIp, int nPort)
     m_strIp = strIp;
     m_nPort = nPort;
 
+
+    m_sidArg=1;
+    m_bigScreenWidth=13056;
+    m_bigScreenHeight=2808;
+
     m_Winnum = 0;
     m_pNetWrok = new CNetWorkForClientsUdp(this);
     m_pNetWrok->CreateConnection(strIp, nPort, this);
@@ -1039,11 +1044,11 @@ void SplitingXiaoNiaoNew::processSync1(QList<QStringList>& sections)
         screen.sw = sw * cols;       //水平宽度 像素
         screen.sh = sh * rows;       //垂直高度 像素
 
-//        if(sid == 1)
-//        {
-//           screen.sw=13056;
-//           screen.sh=2808;
-//        }
+        if(sid == m_sidArg)
+        {
+           screen.sw=m_bigScreenWidth;
+           screen.sh=m_bigScreenHeight;
+        }
 
         screen.xmodulus = 65535.00 / screen.sw;
         screen.ymodulus = 65535.00 / screen.sh;

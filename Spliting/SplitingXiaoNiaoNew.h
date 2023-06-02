@@ -115,6 +115,11 @@ private://拼控器数据
    QTimer m_openWinEnableTimer;
    int m_curSid;
 
+
+   int m_bigScreenWidth;
+   int m_bigScreenHeight;
+
+   int m_sidArg;
 };
 
 #endif // SplitingXiaoNiaoNew_H
